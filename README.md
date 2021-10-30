@@ -8,4 +8,4 @@ Python libraries used:
 - Beautiful Soup
 - Matplotlib
 
-After aligning London boroughs into their respective sub-regions (north/south/east/west/central),
+After using web scraping to align London boroughs into their respective sub-regions (north/south/east/west/central), ....  taking into account weighted averages.
