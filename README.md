@@ -8,4 +8,12 @@ Python libraries used:
 - Beautiful Soup
 - Matplotlib
 
-After using web scraping to align London boroughs into their respective sub-regions (north/south/east/west/central), ....  taking into account weighted averages.
+Original data source can be found on Kaggle here - https://www.kaggle.com/justinas/housing-in-london
+
+See code.py file for code. Current data visualisations produced are as follows:
+
+![Figure_1](https://user-images.githubusercontent.com/92688098/139929098-4ec0dfb5-2f85-459c-bbf4-e2721f8e8c8c.png)
+
+![Figure_2](https://user-images.githubusercontent.com/92688098/139929121-6186ff54-c2c0-4922-bd48-d1497ae3293c.png)
+
+![Figure_3](https://user-images.githubusercontent.com/92688098/139929134-4598b4ed-20d0-4d89-b9f1-3a150fe890b9.png)
