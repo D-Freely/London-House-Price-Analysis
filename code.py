@@ -12,7 +12,7 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-df = pd.read_csv('/Users/dfreely001/Documents/Python Scripts/London House Prices/housing_in_london_monthly_variables.csv', parse_dates=['date'])
+df = pd.read_csv('.../housing_in_london_monthly_variables.csv', parse_dates=['date'])
 
 num_area = df.area.nunique()
 area_lst = df.area.unique().tolist()
@@ -178,7 +178,14 @@ ax3.legend(loc='best')
 
 # ------------------------------------------------------------------------------------------
 
-df_price = df_ldn.groupby('year')['weighted_avg_by_yr'].sum().reset_index()
+def total_sold_year(year):
+    df_total_year = df_ldn[df_ldn['year'].isin([year])]
+    total = df_total_year['houses_sold'].sum()
+    return total
+
+df_ldn['weight_avg_2'] = df_ldn.apply(lambda x: weighted_avg(x['average_price'], x['houses_sold'], total_sold_year(x['year'])), axis=1)
+df_plot = df_ldn.groupby('year')['weight_avg_2'].sum().reset_index()
+
 df_sold = df_ldn.groupby('year')['houses_sold'].sum().reset_index()
 
 fig, ax1 = plt.subplots()
@@ -196,8 +203,7 @@ ax1.set_yticks(y_ax1)
 y_ax1_labels = ['{:,}'.format(y) for y in y_ax1]
 ax1.set_yticklabels(y_ax1_labels)
 
-
-ax2.plot(df_price['year'], df_price['weighted_avg_by_yr'], 'Tomato')
+ax2.plot(df_plot['year'], df_plot['weight_avg_2'], 'Tomato')
 ax2.set_ylabel('$\it{Average House Sale Price (£)}$', color='Tomato')
 ax2.yaxis.labelpad = 15
 y_ax2 = list(range(100000, 500001, 100000))
