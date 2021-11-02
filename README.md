@@ -10,7 +10,7 @@ Python libraries used:
 
 Original data source can be found on Kaggle here - https://www.kaggle.com/justinas/housing-in-london
 
-See code.py file for code. Current data visualisations produced are as follows:
+See code.py file for code. Current findings are visualised in the following matplotlib figures:
 
 ![Figure_1](https://user-images.githubusercontent.com/92688098/139929098-4ec0dfb5-2f85-459c-bbf4-e2721f8e8c8c.png)
 
