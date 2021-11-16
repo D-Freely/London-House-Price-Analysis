@@ -3,9 +3,9 @@ Exploratory data analysis of London house prices in order to find trends and to 
 
 Python libraries used:
 
-- Pandas
 - Scikit-learn
 - Beautiful Soup
+- Pandas
 - Matplotlib
 
 Original data source can be found on Kaggle here - https://www.kaggle.com/justinas/housing-in-london
