@@ -16,4 +16,3 @@ See code.py file for python code. Current findings are visualised in the followi
 
 ![Figure_2](https://user-images.githubusercontent.com/92688098/139929121-6186ff54-c2c0-4922-bd48-d1497ae3293c.png)
 
-![Figure_3](https://user-images.githubusercontent.com/92688098/139929134-4598b4ed-20d0-4d89-b9f1-3a150fe890b9.png)
